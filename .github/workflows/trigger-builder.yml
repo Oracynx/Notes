@@ -1,0 +1,17 @@
+name: Trigger Quartz Builder
+
+on:
+  push:
+    branches:
+      - master   # 当你 push 到 Notes 仓库 main 分支时触发
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger Notes-Builder workflow
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+          repository: Oracynx/Notes-Builder
+          event-type: build-site
