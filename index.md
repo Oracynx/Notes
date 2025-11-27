@@ -1,3 +1,3 @@
 # Oraycnx's Notes
 
-或应该被称之为博客。
+Oracynx 的笔记，或应该被称之为博客。
